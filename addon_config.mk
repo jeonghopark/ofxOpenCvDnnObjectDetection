@@ -22,8 +22,8 @@ ADDON_TAGS = "computer vision" "opencv" "image processing"  "darknet" "yolov2" "
 ADDON_URL = https://github.com/TetsuakiBaba
 
 common:
-ADDON_INCLUDES  += libs/opencv2.framework
-ADDON_FRAMEWORKS += OpenCL
+#ADDON_INCLUDES  += libs/opencv2.framework
+#ADDON_FRAMEWORKS += OpenCL
 
 #ADDON_INCLUDES += /opt/intel/openvino/opencv/include
 #ADDON_LDFLAGS += /opt/intel/openvino/opencv/lib/libopencv_core.4.1.0.dylib

@@ -33,7 +33,14 @@
 
 # model file
 *.weights
+*.caffemodel
+*.cfg
+*.prototxt
 
 # frameworks
 *.framework
 *.zip
+
+gocen/
+iSee/
+*.icns

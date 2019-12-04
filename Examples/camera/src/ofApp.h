@@ -8,10 +8,12 @@ public:
     void setup();
     void update();
     void draw();
-    //ofVideoGrabber video;
-    ofVideoPlayer video;
+
+    ofVideoGrabber camera;
     ofxOpenCvDnnObjectDetection detector;
     
     void keyPressed(int key);
     ofImage img;
+    uint64_t detection_time;
+
 };

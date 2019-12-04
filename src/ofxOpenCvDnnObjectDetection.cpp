@@ -357,7 +357,7 @@ void ofxOpenCvDnnObjectDetection::postprocess(Mat& frame, const std::vector<Mat>
     }
     else if (outLayerType == "DetectionOutput") //SSD
     {
-        cout <<"test"<<endl;
+
         // Network produces output blob with a shape 1x1xNx7 where N is a number of
         // detections and an every detection is a vector of values
         // [batchId, classId, confidence, left, top, right, bottom]
@@ -387,7 +387,7 @@ void ofxOpenCvDnnObjectDetection::postprocess(Mat& frame, const std::vector<Mat>
     }
     else if (outLayerType == "Region") // Yolo
     {
-
+    
         for (size_t i = 0; i < outs.size(); ++i)
         {
             // Network produces output blob with a shape NxC where N is a number of
@@ -416,9 +416,11 @@ void ofxOpenCvDnnObjectDetection::postprocess(Mat& frame, const std::vector<Mat>
             }
         }
     }
-    else
-    CV_Error(Error::StsNotImplemented, "Unknown output layer type: " + outLayerType);
-    
+    else{
+        CV_Error(Error::StsNotImplemented, "Unknown output layer type: " + outLayerType);
+    }
+
+    /*
     std::vector<int> indices;
   //  NMSBoxes(boxes, confidences, confThreshold, nmsThreshold, indices);
     for (size_t i = 0; i < indices.size(); ++i)
@@ -428,6 +430,7 @@ void ofxOpenCvDnnObjectDetection::postprocess(Mat& frame, const std::vector<Mat>
 //        drawPred(classIds[idx], confidences[idx], box.x, box.y,
 //                 box.x + box.width, box.y + box.height, frame);
     }
+     */
 }
 
 void ofxOpenCvDnnObjectDetection::drawAnnotationControls()
@@ -663,8 +666,9 @@ void ofxOpenCvDnnObjectDetection::update(ofPixels &op)
     input_width = (int)op.getWidth();
     input_height = (int)op.getHeight();
     
-    if (frame.channels() == 4)
+    if (frame.channels() == 4){
         cvtColor(frame, frame, COLOR_BGRA2RGB);
+    }
     
     //! [Resizing without keeping aspect ratio]
     Mat resized;
