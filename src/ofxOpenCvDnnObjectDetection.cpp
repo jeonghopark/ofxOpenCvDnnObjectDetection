@@ -593,7 +593,7 @@ void ofxOpenCvDnnObjectDetection::drawAnnotationControls()
         if( ofGetSeconds() %2 == 0)str += ">";
         
         str+="\n\n";
-        str += "[README]\n\nSingle image annotation: Drag and Drop an image.\n - .jpg is only allowd.\nImage directory annotation: Drag and Drop a directory.\n - needs to include .jpg and .txt(yolo) file.\nCamera annotation: press 'c' key.\nVideo file annotation: Drag and Drop a video file.\n - .mov and .mp4 are allowd.\n\nIf you wanna replace yolov2 files, press 'o' to open a data directory, \nthen restart this app.\n\nAuthor:Tetsuaki Baba, https://tetsuakibaba.jp, 2019\nLisence:MIT License";
+        str += "[README]\n\nSingle image annotation: Drag and Drop an image.\n - .jpg is only allowd.\nImage directory annotation: Drag and Drop a directory.\n - needs to include .jpg and .txt(yolo) file.\nCamera annotation: press 'c' key.\nVideo file annotation: Drag and Drop a video file.\n - .mov and .mp4 are allowd.\n\nIf you wanna replace dnn network files, press 'o' to open a data directory. \nThen replace yolo.weights and yolo.cfg files to other files and Restart this app.\n\nAuthor:Tetsuaki Baba, https://tetsuakibaba.jp, 2019\nLisence:MIT License";
         ofRectangle r = font_message.getStringBoundingBox(str,0,0);
         font_message.drawString(str, ofGetWidth()/2-r.getWidth()/2, ofGetHeight()/2-r.getHeight()/2);
     }

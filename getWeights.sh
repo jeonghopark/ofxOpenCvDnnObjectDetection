@@ -10,7 +10,7 @@ else
 fi
 cp ./yolov2-tiny.weights ./Examples/camera/bin/data/dnn/
 cp ./yolov2-tiny.weights ./Examples/single_image/bin/data/dnn/
-cp ./yolov2-tiny.weights ./Examples/annotation/bin/data/dnn/
+cp ./yolov2-tiny.weights ./Examples/annotation/bin/data/dnn/yolo.weights
 if wget ${path_to_cfg}; then
 	echo "downloading cfg"
 else

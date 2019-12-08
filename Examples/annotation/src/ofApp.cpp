@@ -2,12 +2,12 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    //ofSetDataPathRoot("../Resources/data/");
+    ofSetDataPathRoot("../Resources/data/");
     
     // yolo setting up
     ofSetFrameRate(60);
-    detector.setup(ofToDataPath("dnn/yolov2-tiny.cfg"),
-               ofToDataPath("dnn/yolov2-tiny.weights"),
+    detector.setup(ofToDataPath("dnn/yolo.cfg"),
+               ofToDataPath("dnn/yolo.weights"),
                ofToDataPath("dnn/classlist.txt")
                );
     detector.setupAnnotationGui();
